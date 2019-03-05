@@ -9,6 +9,7 @@ gem 'jquery-rails', '4.3.1'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
 gem 'bootstrap-sass', '3.3.1'
+gem 'devise', '4.6.1'
 
 group :production do
   gem 'pg'
