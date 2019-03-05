@@ -16,12 +16,12 @@
     <nav class="navbar navbar-dark bg-primary">
         <span class="navbar-brand mb-0 h1 justify-content-end"><%= link_to "Master the Messenger", root_path, class: "text-white" %></span>
           <div class="nav justify-content-end"> 
-          <%# if current_user %>
-            <%#=button_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-primary navbar-btn' %>
-          <%# else %>
-            <%#= link_to "Log in", new_user_session_path, class: 'btn btn-primary navbar-btn', method: :get %>
-            <%#= link_to "Sign up", new_user_registration_path, class: 'btn btn-primary navbar-btn', method: :get %>
-          <%# end %>
+          <% if current_user %>
+            <%=button_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-primary navbar-btn' %>
+          <% else %>
+            <%= link_to "Log in", new_user_session_path, class: 'btn btn-primary navbar-btn', method: :get %>
+            <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-primary navbar-btn', method: :get %>
+          <% end %>
         </div>
     </nav>
     
